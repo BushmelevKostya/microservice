@@ -11,7 +11,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class CsvTransactionReader {
-
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss");
 
     public List<Transaction> readTransactions(String path, Type type) {
