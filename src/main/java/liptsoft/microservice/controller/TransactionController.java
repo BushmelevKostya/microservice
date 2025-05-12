@@ -26,7 +26,7 @@ public class TransactionController {
 			@RequestParam Optional<Integer> from,
 			@RequestParam Optional<Integer> to,
 			@RequestParam Optional<LocalDateTime> startTime,
-			@RequestParam Optional<LocalDate> endTime,
+			@RequestParam Optional<LocalDateTime> endTime,
 			@RequestParam Optional<Long> accountId,
 			/*
 			 Так как задание не предполагает аутентификации и авторизации,
