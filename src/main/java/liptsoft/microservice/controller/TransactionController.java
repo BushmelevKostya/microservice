@@ -2,6 +2,7 @@ package liptsoft.microservice.controller;
 
 import liptsoft.microservice.model.Transaction;
 import liptsoft.microservice.service.TransactionService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,8 +17,9 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController("/api")
+@RequiredArgsConstructor
 public class TransactionController {
-	private TransactionService transactionService;
+	private final TransactionService transactionService;
 
 	@GetMapping("/search")
 	public ResponseEntity<List<Transaction>> search(
