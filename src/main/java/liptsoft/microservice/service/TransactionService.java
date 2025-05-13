@@ -15,10 +15,6 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 public class TransactionService {
-	/*
-	 * Поскольку файл не помещается целиком в оперативную память, будем работать с базой данных для эффективной
-	 * выборки записей. Так как необходимо сортировать и фильтровать по дате, необходимо сделать индекс на этот атрибут
-	 */
 	private final TransactionRepository transactionRepository;
 	
 	private final int defaultFromValue = 1;
