@@ -1,9 +1,6 @@
 package liptsoft.microservice.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,6 +10,9 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Entity
+@Table(name = "transaction", indexes = {
+		@Index(name = "idx_transaction_date_time", columnList = "date_time")
+})
 public class Transaction {
 	@Id
 	private long transactionId;
