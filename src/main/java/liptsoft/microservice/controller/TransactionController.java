@@ -33,7 +33,7 @@ public class TransactionController {
 			 будем получать id пользователя в параметрах запроса.
 			 Я так понял, что пользователь может получить только принадлежащие ему транзакции
 			*/
-			@RequestParam Integer customerId
+			@RequestParam Optional<Integer> customerId
 	) {
 		List<Transaction> transactions = transactionService.searchByFilters(from, to, startTime, endTime, accountId, customerId);
 		return ResponseEntity.ok().body(transactions);
